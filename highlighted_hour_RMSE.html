@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hour RMSE - Best Values Highlighted</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .best-value {
+            background-color: #ffff00;
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .symbol-col {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hour RMSE - Best Values Highlighted</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="symbol-col">Symbol</th>
+                <th>ChronosFineTuned[bolt_small]</th>
+                <th>ChronosZeroShot[bolt_base]</th>
+                <th>DirectTabular</th>
+                <th>NPTS</th>
+                <th>PatchTST</th>
+                <th>RecursiveTabular</th>
+                <th>SeasonalNaive</th>
+                <th>TemporalFusionTransformer</th>
+                <th>TiDE</th>
+                <th>TimeGPT_No_var_hour</th>
+                <th>TimeGPT_finetune_No_var_hour</th>
+                <th>TimeGPT_finetune_var_hour</th>
+                <th>TimeGPT_var_hour</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="symbol-col">ADA</td>
+                <td>-0.012628</td>
+                <td>-0.010985</td>
+                <td>-0.018225</td>
+                <td>-0.036442</td>
+                <td class="best-value">-0.007662</td>
+                <td>-0.014260</td>
+                <td>-0.018146</td>
+                <td>-0.008171</td>
+                <td>-0.011527</td>
+                <td>-0.009525</td>
+                <td>-0.009676</td>
+                <td>-0.009801</td>
+                <td>-0.009735</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">ARB</td>
+                <td>-0.016687</td>
+                <td>-0.003465</td>
+                <td>-0.022695</td>
+                <td>-0.016938</td>
+                <td>-0.006765</td>
+                <td>-0.031422</td>
+                <td>-0.018895</td>
+                <td>-0.010471</td>
+                <td>-0.004810</td>
+                <td>-0.003343</td>
+                <td class="best-value">-0.002907</td>
+                <td>-0.003513</td>
+                <td>-0.003382</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">ATOM</td>
+                <td>-0.033148</td>
+                <td>-0.036928</td>
+                <td>-0.046868</td>
+                <td>-0.038726</td>
+                <td>-0.046243</td>
+                <td>-0.089872</td>
+                <td>-0.101651</td>
+                <td>-0.040959</td>
+                <td>-0.082240</td>
+                <td class="best-value">-0.029301</td>
+                <td>-0.029739</td>
+                <td>-0.040238</td>
+                <td>-0.039599</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">AVAX</td>
+                <td>-0.327533</td>
+                <td>-0.117745</td>
+                <td>-0.146974</td>
+                <td>-0.916564</td>
+                <td>-0.217132</td>
+                <td>-0.699441</td>
+                <td>-0.452264</td>
+                <td>-0.134805</td>
+                <td>-0.665975</td>
+                <td>-0.119085</td>
+                <td>-0.103908</td>
+                <td>-0.102454</td>
+                <td class="best-value">-0.101324</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">BCH</td>
+                <td>-8.104109</td>
+                <td>-12.044788</td>
+                <td>-19.625076</td>
+                <td>-60.399396</td>
+                <td>-19.906208</td>
+                <td>-6.161985</td>
+                <td>-20.694823</td>
+                <td>-14.824119</td>
+                <td>-14.824214</td>
+                <td>-4.758831</td>
+                <td class="best-value">-4.132856</td>
+                <td>-4.597443</td>
+                <td>-4.463528</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">BNB</td>
+                <td>-1.405476</td>
+                <td>-1.276941</td>
+                <td>-4.320581</td>
+                <td>-11.034615</td>
+                <td>-3.583310</td>
+                <td>-10.105611</td>
+                <td>-8.108673</td>
+                <td>-1.143873</td>
+                <td>-4.325978</td>
+                <td class="best-value">-0.972429</td>
+                <td>-1.026543</td>
+                <td>-1.022729</td>
+                <td>-1.074064</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">BTC</td>
+                <td>-620.956032</td>
+                <td>-534.291938</td>
+                <td>-659.534082</td>
+                <td>-1732.268285</td>
+                <td>-631.406941</td>
+                <td>-626.299458</td>
+                <td>-643.479359</td>
+                <td>-220.793287</td>
+                <td>-1675.448975</td>
+                <td>-347.755923</td>
+                <td class="best-value">-200.831886</td>
+                <td>-307.094776</td>
+                <td>-320.083815</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">DOGE</td>
+                <td>-0.001405</td>
+                <td>-0.001219</td>
+                <td>-0.003141</td>
+                <td>-0.007787</td>
+                <td>-0.001927</td>
+                <td>-0.003137</td>
+                <td>-0.002917</td>
+                <td>-0.001824</td>
+                <td>-0.003372</td>
+                <td class="best-value">-0.000999</td>
+                <td>-0.001089</td>
+                <td>-0.001119</td>
+                <td>-0.001105</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">DOT</td>
+                <td>-0.031840</td>
+                <td>-0.027435</td>
+                <td>-0.041543</td>
+                <td>-0.299410</td>
+                <td>-0.026262</td>
+                <td>-0.114670</td>
+                <td>-0.085608</td>
+                <td>-0.025223</td>
+                <td>-0.064224</td>
+                <td>-0.022425</td>
+                <td class="best-value">-0.021884</td>
+                <td>-0.024088</td>
+                <td>-0.023800</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">ETC</td>
+                <td>-0.089105</td>
+                <td>-0.074198</td>
+                <td>-0.082510</td>
+                <td>-0.083100</td>
+                <td>-0.135199</td>
+                <td>-0.333746</td>
+                <td>-0.267208</td>
+                <td>-0.191432</td>
+                <td>-0.094707</td>
+                <td>-0.070216</td>
+                <td class="best-value">-0.061790</td>
+                <td>-0.064976</td>
+                <td>-0.064375</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">ETH</td>
+                <td>-21.563010</td>
+                <td>-22.181908</td>
+                <td>-44.377040</td>
+                <td>-18.818753</td>
+                <td>-25.019353</td>
+                <td>-43.534917</td>
+                <td>-52.416473</td>
+                <td class="best-value">-14.804095</td>
+                <td>-30.195977</td>
+                <td>-23.054078</td>
+                <td>-23.487303</td>
+                <td>-23.288797</td>
+                <td>-23.004292</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">ICP</td>
+                <td>-0.067220</td>
+                <td>-0.041360</td>
+                <td>-0.047412</td>
+                <td>-0.206652</td>
+                <td>-0.071738</td>
+                <td>-0.143271</td>
+                <td>-0.111934</td>
+                <td>-0.037900</td>
+                <td>-0.051091</td>
+                <td>-0.036242</td>
+                <td class="best-value">-0.035780</td>
+                <td>-0.035864</td>
+                <td>-0.035785</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">LINK</td>
+                <td>-0.159440</td>
+                <td>-0.150694</td>
+                <td class="best-value">-0.105069</td>
+                <td>-0.153165</td>
+                <td>-0.182535</td>
+                <td>-0.244852</td>
+                <td>-0.236008</td>
+                <td>-0.147188</td>
+                <td>-0.252173</td>
+                <td>-0.150536</td>
+                <td>-0.153705</td>
+                <td>-0.158569</td>
+                <td>-0.156772</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">LTC</td>
+                <td class="best-value">-0.398251</td>
+                <td>-0.528643</td>
+                <td>-0.661265</td>
+                <td>-0.673040</td>
+                <td>-1.165873</td>
+                <td>-0.868552</td>
+                <td>-1.067641</td>
+                <td>-0.526575</td>
+                <td>-0.962117</td>
+                <td>-0.552875</td>
+                <td>-0.571493</td>
+                <td>-0.546671</td>
+                <td>-0.541912</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">MATIC</td>
+                <td>-0.004689</td>
+                <td>-0.002110</td>
+                <td>-0.011438</td>
+                <td>-0.005199</td>
+                <td class="best-value">-0.001812</td>
+                <td>-0.003583</td>
+                <td>-0.008761</td>
+                <td>-0.003099</td>
+                <td>-0.003542</td>
+                <td>-0.001999</td>
+                <td>-0.002041</td>
+                <td>-0.001861</td>
+                <td>-0.001850</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">OP</td>
+                <td>-0.020256</td>
+                <td>-0.003883</td>
+                <td>-0.006786</td>
+                <td>-0.018713</td>
+                <td>-0.006075</td>
+                <td>-0.036915</td>
+                <td>-0.024410</td>
+                <td class="best-value">-0.003644</td>
+                <td>-0.014557</td>
+                <td>-0.012159</td>
+                <td>-0.008684</td>
+                <td>-0.004817</td>
+                <td>-0.005208</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">SHIB</td>
+                <td>-0.000000</td>
+                <td>-0.000000</td>
+                <td>-0.000000</td>
+                <td>-0.000001</td>
+                <td>-0.000000</td>
+                <td>-0.000000</td>
+                <td>-0.000000</td>
+                <td>-0.000001</td>
+                <td>-0.000000</td>
+                <td>-0.000000</td>
+                <td>-0.000000</td>
+                <td class="best-value">-0.000000</td>
+                <td>-0.000000</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">SOL</td>
+                <td>-1.677552</td>
+                <td>-1.469793</td>
+                <td>-4.994715</td>
+                <td>-7.256729</td>
+                <td>-1.333010</td>
+                <td>-2.419375</td>
+                <td>-4.504615</td>
+                <td class="best-value">-0.977653</td>
+                <td>-4.026790</td>
+                <td>-1.313044</td>
+                <td>-1.153804</td>
+                <td>-1.458938</td>
+                <td>-1.490917</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">TRX</td>
+                <td>-0.000986</td>
+                <td>-0.001114</td>
+                <td>-0.004303</td>
+                <td>-0.005845</td>
+                <td>-0.001891</td>
+                <td>-0.000773</td>
+                <td>-0.003554</td>
+                <td>-0.001934</td>
+                <td class="best-value">-0.000603</td>
+                <td>-0.001876</td>
+                <td>-0.000847</td>
+                <td>-0.000702</td>
+                <td>-0.000712</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">UNI</td>
+                <td>-0.110419</td>
+                <td>-0.083372</td>
+                <td>-0.119779</td>
+                <td>-0.215117</td>
+                <td>-0.075805</td>
+                <td>-0.168590</td>
+                <td>-0.166174</td>
+                <td>-0.125160</td>
+                <td>-0.095454</td>
+                <td>-0.048442</td>
+                <td class="best-value">-0.044158</td>
+                <td>-0.048552</td>
+                <td>-0.048440</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">XRP</td>
+                <td>-0.093613</td>
+                <td>-0.068841</td>
+                <td>-0.092178</td>
+                <td>-0.096986</td>
+                <td>-0.077906</td>
+                <td>-0.068746</td>
+                <td>-0.078374</td>
+                <td>-0.073659</td>
+                <td class="best-value">-0.039618</td>
+                <td>-0.070073</td>
+                <td>-0.070604</td>
+                <td>-0.065803</td>
+                <td>-0.066374</td>
+            </tr>
+            <tr>
+                <td class="symbol-col">avg_score</td>
+                <td>31.193971</td>
+                <td>27.257969</td>
+                <td>34.964842</td>
+                <td>87.264355</td>
+                <td>32.536840</td>
+                <td>32.921104</td>
+                <td>34.849880</td>
+                <td>12.089289</td>
+                <td>82.436569</td>
+                <td>18.046829</td>
+                <td class="best-value">11.035748</td>
+                <td>16.122463</td>
+                <td>16.724619</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
