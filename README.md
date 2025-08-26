@@ -1,5 +1,5 @@
-TimeGPT's Potential in Cryptocurrency Forecasting
-This repository is the official code and data repository for the research paper "TimeGPT’s Potential in Cryptocurrency Forecasting: Efficiency, Accuracy, and Economic Value." It contains all the datasets used in the study and the analysis scripts to generate all the results.
+
+This repository is the data repository for the research paper "TimeGPT’s Potential in Cryptocurrency Forecasting: Efficiency, Accuracy, and Economic Value." It contains all the datasets used in the study and all the results.
 
 Key Content
 Comprehensive Results: Provides all benchmark results from running 9 predictive models on 21 major cryptocurrencies, including multi-dimensional performance metrics like MAE, RMSE, and MAPE.
